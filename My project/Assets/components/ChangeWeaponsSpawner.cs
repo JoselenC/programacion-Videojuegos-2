@@ -19,12 +19,19 @@ public class ChangeWeaponsSpawner : MonoBehaviour
     {
         if (_count % 2 == 0)
         {
-            Instantiate(changeWeapons,new Vector3(1f, player.transform.position.y+10, 0f), Quaternion.identity);
+            GameObject prefab1 = Instantiate(changeWeapons,new Vector3(1f, player.transform.position.y+10, 0f), Quaternion.identity);
+            DestroyPrefab(prefab1);
         }
         else
         {
-            Instantiate(changeWeapons,new Vector3(1f, player.transform.position.y+10, 0f), Quaternion.identity);
+            GameObject prefab1 = Instantiate(changeWeapons,new Vector3(1f, player.transform.position.y+10, 0f), Quaternion.identity);
+            DestroyPrefab(prefab1);
         }
         _count++;
+    }
+    
+    private void DestroyPrefab(GameObject prefab)
+    {
+        Destroy(prefab, 30f);
     }
 }

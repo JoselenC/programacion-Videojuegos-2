@@ -20,14 +20,21 @@ public class LifeSpawner : MonoBehaviour
         {
             int randomIndex = Random.Range(0, starsPrefabs.Length);
             GameObject obstaclePrefab = starsPrefabs[randomIndex];
-            Instantiate(obstaclePrefab, new Vector3(-1f, player.transform.position.y+24f, 0f), Quaternion.identity);
+            GameObject prefab1 = Instantiate(obstaclePrefab, new Vector3(-1f, player.transform.position.y+24f, 0f), Quaternion.identity);
+            DestroyPrefab(prefab1);
         }
         else
         {
             int randomIndex = Random.Range(0, starsPrefabs.Length);
             GameObject obstaclePrefab = starsPrefabs[randomIndex];
-            Instantiate(obstaclePrefab, new Vector3(1f, player.transform.position.y+24f, 0f), Quaternion.identity);
+            GameObject prefab1 = Instantiate(obstaclePrefab, new Vector3(1f, player.transform.position.y+24f, 0f), Quaternion.identity);
+            DestroyPrefab(prefab1);
         }
         count++;
+    }
+    
+    private void DestroyPrefab(GameObject prefab)
+    {
+        Destroy(prefab, 30f);
     }
 }

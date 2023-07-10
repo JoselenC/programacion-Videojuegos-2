@@ -92,17 +92,22 @@ public class EnemySpawner : MonoBehaviour
         _count++;
     }
 
+
         private void FirstEnemiesLevel()
     {
         if (_count % 2 == 0)
         {
-            Instantiate(enemyPrefabs[0], GetSpawnPosition(1f, 27f), Quaternion.identity);
-            Instantiate(enemyPrefabs[1], GetSpawnPosition(0f, 9f), Quaternion.identity);
+            GameObject prefab1 =Instantiate(enemyPrefabs[0], GetSpawnPosition(1f, 27f), Quaternion.identity);
+            GameObject prefab2 =Instantiate(enemyPrefabs[1], GetSpawnPosition(0f, 9f), Quaternion.identity);
+            DestroyPrefab(prefab1);
+            DestroyPrefab(prefab2);
         }
         else
         {
-            Instantiate(enemyPrefabs[0], GetSpawnPosition(0f, 27f), Quaternion.identity);
-            Instantiate(enemyPrefabs[1], GetSpawnPosition(-1f, 9f), Quaternion.identity);
+            GameObject prefab1 =Instantiate(enemyPrefabs[0], GetSpawnPosition(0f, 27f), Quaternion.identity);
+            GameObject prefab2 = Instantiate(enemyPrefabs[1], GetSpawnPosition(-1f, 9f), Quaternion.identity);
+            DestroyPrefab(prefab1);
+            DestroyPrefab(prefab2);
         }
     }
 
@@ -110,13 +115,17 @@ public class EnemySpawner : MonoBehaviour
     {
         if (_count % 2 == 0)
         {
-            Instantiate(enemyPrefabs[0], GetSpawnPosition(-1f, 9f), Quaternion.identity);
-            Instantiate(enemyPrefabs[2], GetSpawnPosition(0f, 28f), Quaternion.identity);
+            GameObject prefab1 = Instantiate(enemyPrefabs[0], GetSpawnPosition(-1f, 9f), Quaternion.identity);
+            GameObject prefab2 =Instantiate(enemyPrefabs[2], GetSpawnPosition(0f, 28f), Quaternion.identity);
+            DestroyPrefab(prefab1);
+            DestroyPrefab(prefab2);
         }
         else
         {
-            Instantiate(enemyPrefabs[1], GetSpawnPosition(1f, 29f), Quaternion.identity);
-            Instantiate(enemyPrefabs[2], GetSpawnPosition(0f, 9f), Quaternion.identity);
+            GameObject prefab1 =Instantiate(enemyPrefabs[1], GetSpawnPosition(1f, 29f), Quaternion.identity);
+            GameObject prefab2 =Instantiate(enemyPrefabs[2], GetSpawnPosition(0f, 9f), Quaternion.identity);
+            DestroyPrefab(prefab1);
+            DestroyPrefab(prefab2);
         }
     }
 
@@ -124,13 +133,17 @@ public class EnemySpawner : MonoBehaviour
     {
         if (_count % 2 == 0)
         {
-            Instantiate(enemyPrefabs[2], GetSpawnPosition(0f, 10f), Quaternion.identity);
-            Instantiate(enemyPrefabs[3], GetSpawnPosition(1f, 27f), Quaternion.identity);
+            GameObject prefab1 =Instantiate(enemyPrefabs[2], GetSpawnPosition(0f, 10f), Quaternion.identity);
+            GameObject prefab2 =Instantiate(enemyPrefabs[3], GetSpawnPosition(1f, 27f), Quaternion.identity);
+            DestroyPrefab(prefab1);
+            DestroyPrefab(prefab2);
         }
         else
         {
-            Instantiate(enemyPrefabs[1], GetSpawnPosition(-1f, 29f), Quaternion.identity);
-            Instantiate(enemyPrefabs[3], GetSpawnPosition(0f, 10f), Quaternion.identity);
+            GameObject prefab1 = Instantiate(enemyPrefabs[1], GetSpawnPosition(-1f, 29f), Quaternion.identity);
+            GameObject prefab2 =Instantiate(enemyPrefabs[3], GetSpawnPosition(0f, 10f), Quaternion.identity);
+            DestroyPrefab(prefab1);
+            DestroyPrefab(prefab2);
         }
     }
 
@@ -138,15 +151,21 @@ public class EnemySpawner : MonoBehaviour
     {
         if (_count % 2 == 0)
         {
-            Instantiate(enemyPrefabs[2], GetSpawnPosition(0f, 10f), Quaternion.identity);
-            Instantiate(enemyPrefabs[4], GetSpawnPosition(-1f, 20f), Quaternion.identity);
-            Instantiate(enemyPrefabs[3], GetSpawnPosition(1f, 30f), Quaternion.identity);
+            GameObject prefab1 = Instantiate(enemyPrefabs[2], GetSpawnPosition(0f, 10f), Quaternion.identity);
+            GameObject prefab2 = Instantiate(enemyPrefabs[4], GetSpawnPosition(-1f, 20f), Quaternion.identity);
+            GameObject prefab3 =Instantiate(enemyPrefabs[3], GetSpawnPosition(1f, 30f), Quaternion.identity);
+            DestroyPrefab(prefab1);
+            DestroyPrefab(prefab2);
+            DestroyPrefab(prefab3);
         }
         else
         {
-            Instantiate(enemyPrefabs[1], GetSpawnPosition(0f, 20f), Quaternion.identity);
-            Instantiate(enemyPrefabs[4], GetSpawnPosition(-1f, 30f), Quaternion.identity);
-            Instantiate(enemyPrefabs[3], GetSpawnPosition(1f, 10f), Quaternion.identity);
+            GameObject prefab1 = Instantiate(enemyPrefabs[1], GetSpawnPosition(0f, 20f), Quaternion.identity);
+            GameObject prefab2 = Instantiate(enemyPrefabs[4], GetSpawnPosition(-1f, 30f), Quaternion.identity);
+            GameObject prefab3 =Instantiate(enemyPrefabs[3], GetSpawnPosition(1f, 10f), Quaternion.identity);
+            DestroyPrefab(prefab1);
+            DestroyPrefab(prefab2);
+            DestroyPrefab(prefab3);
         }
     }
 
@@ -154,13 +173,17 @@ public class EnemySpawner : MonoBehaviour
     {
         if (_count % 2 == 0)
         {
-            Instantiate(enemyPrefabs[5], GetSpawnPosition(0f, 25f), Quaternion.identity);
-            Instantiate(enemyPrefabs[2], GetSpawnPosition(1f, 9f), Quaternion.identity);
+            GameObject prefab1 = Instantiate(enemyPrefabs[5], GetSpawnPosition(0f, 25f), Quaternion.identity);
+            GameObject prefab2 = Instantiate(enemyPrefabs[2], GetSpawnPosition(1f, 9f), Quaternion.identity);
+            DestroyPrefab(prefab1);
+            DestroyPrefab(prefab2);
         }
         else
         {
-            Instantiate(enemyPrefabs[5], GetSpawnPosition(-1f, 9f), Quaternion.identity);
-            Instantiate(enemyPrefabs[3], GetSpawnPosition(0f, 28f), Quaternion.identity);
+            GameObject prefab1 =  Instantiate(enemyPrefabs[5], GetSpawnPosition(-1f, 9f), Quaternion.identity);
+            GameObject prefab2 = Instantiate(enemyPrefabs[3], GetSpawnPosition(0f, 28f), Quaternion.identity);
+            DestroyPrefab(prefab1);
+            DestroyPrefab(prefab2);
         }
     }
 
@@ -168,6 +191,11 @@ public class EnemySpawner : MonoBehaviour
     {
         Vector3 playerPosition = player.transform.position;
         return new Vector3(offsetX, playerPosition.y + offsetY, 0f);
+    }
+        
+    private void DestroyPrefab(GameObject prefab)
+    {
+        Destroy(prefab, 30f);
     }
 
 }

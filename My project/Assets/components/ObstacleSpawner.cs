@@ -97,7 +97,8 @@ public class ObstacleSpawner : MonoBehaviour
         {
             int randomIndex = Random.Range(0, obstaclePrefabs.Length - 1);
             GameObject obstaclePrefab = obstaclePrefabs[randomIndex];
-            Instantiate(obstaclePrefab, new Vector3(1f, player.transform.position.y + 13f, 0f), Quaternion.identity);
+            GameObject prefab1 =Instantiate(obstaclePrefab, new Vector3(1f, player.transform.position.y + 13f, 0f), Quaternion.identity);
+            DestroyPrefab(prefab1);
         }
     }
 
@@ -107,17 +108,21 @@ public class ObstacleSpawner : MonoBehaviour
         {
             GameObject obstaclePrefab = obstaclePrefabs[0];
             var position = player.transform.position;
-            Instantiate(obstaclePrefab, new Vector3(0f, position.y + 7f, 0f), Quaternion.identity);
+            GameObject prefab1 =Instantiate(obstaclePrefab, new Vector3(0f, position.y + 7f, 0f), Quaternion.identity);
             obstaclePrefab = obstaclePrefabs[1];
-            Instantiate(obstaclePrefab, new Vector3(1f, position.y + 20f, 0f), Quaternion.identity);
+            GameObject prefab2 =Instantiate(obstaclePrefab, new Vector3(1f, position.y + 20f, 0f), Quaternion.identity);
+            DestroyPrefab(prefab1);
+            DestroyPrefab(prefab2);
         }
         else
         {
             GameObject obstaclePrefab = obstaclePrefabs[1];
             var position = player.transform.position;
-            Instantiate(obstaclePrefab, new Vector3(-1f, position.y + 7f, 0f), Quaternion.identity);
+            GameObject prefab1 =Instantiate(obstaclePrefab, new Vector3(-1f, position.y + 7f, 0f), Quaternion.identity);
             obstaclePrefab = obstaclePrefabs[0];
-            Instantiate(obstaclePrefab, new Vector3(0f, position.y + 20f, 0f), Quaternion.identity);
+            GameObject prefab2 =Instantiate(obstaclePrefab, new Vector3(0f, position.y + 20f, 0f), Quaternion.identity);
+            DestroyPrefab(prefab1);
+            DestroyPrefab(prefab2);
         }
     }
 
@@ -127,17 +132,27 @@ public class ObstacleSpawner : MonoBehaviour
         {
             GameObject obstaclePrefab = obstaclePrefabs[0];
             var position = player.transform.position;
-            Instantiate(obstaclePrefab, new Vector3(0f, position.y + 8f, 0f), Quaternion.identity);
+            GameObject prefab1 =Instantiate(obstaclePrefab, new Vector3(0f, position.y + 8f, 0f), Quaternion.identity);
             obstaclePrefab = obstaclePrefabs[1];
-            Instantiate(obstaclePrefab, new Vector3(1f, position.y + 19f, 0f), Quaternion.identity);
+            GameObject prefab2 =Instantiate(obstaclePrefab, new Vector3(1f, position.y + 19f, 0f), Quaternion.identity);
+            DestroyPrefab(prefab1);
+            DestroyPrefab(prefab2);
         }
         else
         {
             GameObject obstaclePrefab = obstaclePrefabs[0];
             var position = player.transform.position;
-            Instantiate(obstaclePrefab, new Vector3(-1f, position.y + 6f, 0f), Quaternion.identity);
+            GameObject prefab1 = Instantiate(obstaclePrefab, new Vector3(-1f, position.y + 6f, 0f), Quaternion.identity);
             obstaclePrefab = obstaclePrefabs[1];
-            Instantiate(obstaclePrefab, new Vector3(0f, position.y + 17f, 0f), Quaternion.identity);
+            GameObject prefab2 =Instantiate(obstaclePrefab, new Vector3(0f, position.y + 17f, 0f), Quaternion.identity);
+            DestroyPrefab(prefab1);
+            DestroyPrefab(prefab2);
         }
+    }
+    
+    
+    private void DestroyPrefab(GameObject prefab)
+    {
+        Destroy(prefab, 30f);
     }
 }

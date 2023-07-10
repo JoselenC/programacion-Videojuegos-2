@@ -26,7 +26,7 @@ public class LifeController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if  (collision.CompareTag("Player"))
+        if  (collision.CompareTag("Player") && barraVida == null)
         {
             Destroy(this.gameObject);
             int life = PlayerPrefs.GetInt("life");
