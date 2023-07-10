@@ -50,7 +50,7 @@ public class PlayerController : MonoBehaviour
 
         int rotationDirection = Mathf.Clamp(Mathf.RoundToInt(moveHorizontal), -1, 1);
 
-        float rotationAngle = rotationDirection * 20f;
+        float rotationAngle = - rotationDirection * 20f;
 
         transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, rotationAngle);
 
@@ -78,10 +78,10 @@ public class PlayerController : MonoBehaviour
 
             // bullet en diagonal
             GameObject bulletDiagonal1 = Instantiate(bulletPrefab, bulletSpawn.position + new Vector3(-0.5f, 1, 0), Quaternion.identity);
-            bulletDiagonal1.transform.rotation = Quaternion.Euler(0f, 0f, 45f);
+            bulletDiagonal1.transform.rotation = Quaternion.Euler(0f, 0f, 20f);
 
             GameObject bulletDiagonal2 = Instantiate(bulletPrefab, bulletSpawn.position + new Vector3(0.5f, 1, 0), Quaternion.identity);
-            bulletDiagonal2.transform.rotation = Quaternion.Euler(0f, 0f, -45f);
+            bulletDiagonal2.transform.rotation = Quaternion.Euler(0f, 0f, -20f);
         }
     }
 
