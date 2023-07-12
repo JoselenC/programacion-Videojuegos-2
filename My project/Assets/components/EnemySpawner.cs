@@ -27,7 +27,7 @@ public class EnemySpawner : MonoBehaviour
     
     private void SetInterval(int score)
     {
-        if (score < 1200)
+        if (score < 20)
         {
             if (_controlCount1200 == 0)
             {
@@ -37,7 +37,7 @@ public class EnemySpawner : MonoBehaviour
                 _controlCount1200 = 1;
             }
         }
-        else if (score < 5000)
+        else if (score < 50)
         {
             if (_controlCount5000 == 0)
             {
@@ -49,7 +49,7 @@ public class EnemySpawner : MonoBehaviour
         }
         else
         {
-            if (_controlCount5001 == 0)
+            if (_controlCount5001 == 90)
             {
                 _spawnInterval = 7f;
                 CancelInvoke("SpawnEnemies");
@@ -64,22 +64,22 @@ public class EnemySpawner : MonoBehaviour
     {
         int score = PlayerPrefs.GetInt("score");
       
-        if (score<1200)
+        if (score<20)
         {
             PlayerPrefs.SetInt("level",1);
             FirstEnemiesLevel();
         }
-        else if (score < 3500)
+        else if (score < 40)
         {
             PlayerPrefs.SetInt("level",2);
             SecondEnemiesLevel();
         }
-        else if (score < 6200)
+        else if (score < 60)
         {
             PlayerPrefs.SetInt("level",3);
             ThirdEnemiesLevel();
         }
-        else if (score < 9100)
+        else if (score < 80)
         {
             PlayerPrefs.SetInt("level",4);
             FourthEnemiesLevel();

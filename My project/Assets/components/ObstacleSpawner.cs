@@ -25,7 +25,7 @@ public class ObstacleSpawner : MonoBehaviour
     private void Update()
     {
         int score = PlayerPrefs.GetInt("score");
-        if (score < 1200)
+        if (score < 20)
         {
             if (_controlCount1200 == 0)
             {
@@ -35,7 +35,7 @@ public class ObstacleSpawner : MonoBehaviour
                 _controlCount1200 = 1;
             }
         }
-        else if (score<5000)
+        else if (score<40)
         {
             if (_controlCount5000 == 0)
             {
@@ -60,11 +60,11 @@ public class ObstacleSpawner : MonoBehaviour
     private void SpawnObstacle()
     {
         int score = PlayerPrefs.GetInt("score");
-        if (score < 1200)
+        if (score < 20)
         {
             FirstObstacleLevel();
         }
-        else if (score<5000)
+        else if (score<50)
         {
             SecondObstacleLevel();
         }
